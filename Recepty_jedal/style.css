@@ -8,22 +8,21 @@
 
 }
 .Header {
-    margin-top: 5px; 
-    display: flex; 
-    flex-direction: row; 
-    text-align: center; 
-    height: 50px; 
-    justify-content: center; 
-    position: fixed; 
-    top: 0px; 
-    z-index: 1000; 
-    margin-left: 150px;
-    background-color: red; 
-    width: 600px; 
+    margin-top: 5px;
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+    width: min(1000px, calc(100% - 20px));
+    background-color: red;
     border-radius: 10px;
-    
-    
+   
 }
+    
+
 .Logo {
     width: 140px;
     margin-top: 3px ;
@@ -33,16 +32,18 @@
     display: flex; 
     flex-direction: row; 
     text-align: center; 
-    height: 32px; 
+    left: 50%;    
     justify-content: center; 
     position: fixed; 
     top: 55px; 
     z-index: 1000; 
-    margin-left: 7px;
     background-color: red; 
-    width: 900px; 
     border-radius: 10px;
+    transform: translateX(-50%);
+    width: min(750px, calc(100% - 80px));
+    
 }
+
 .Footer {
     display: flex; 
     flex-direction: row; 
@@ -53,7 +54,8 @@
     left: 0; 
     width: 100%;
     background-color: red; 
-}
+    justify-content: center;
+}  
 p{
     color: white;
     text-align: center;
@@ -61,7 +63,6 @@ p{
     padding-bottom: 20px;
     height: 1000px;
     align-items: center;
-    margin: 11px;
-    font-size: 8px;
+    margin: 9px;
+    font-size: 12px;
 }
-
