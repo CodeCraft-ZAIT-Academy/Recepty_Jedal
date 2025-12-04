@@ -1,3 +1,14 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    overflow-x: hidden;
+}
+
 .Navbar_buttons {
     background-color: transparent;
     border: none;
@@ -5,8 +16,8 @@
     font-size: 16px;
     margin: 5px;
     cursor: pointer;
-
 }
+
 .Header {
     margin-top: 5px;
     display: flex;
@@ -19,29 +30,27 @@
     width: min(1000px, calc(100% - 20px));
     background-color: red;
     border-radius: 10px;
-   
 }
-    
 
 .Logo {
     width: 140px;
-    margin-top: 3px ;
+    margin-top: 3px;
 }
+
 .Navbar {
-    margin-top: 2px; 
-    display: flex; 
-    flex-direction: row; 
-    text-align: center; 
-    left: 50%;    
-    justify-content: center; 
-    position: fixed; 
-    top: 55px; 
-    z-index: 1000; 
-    background-color: red; 
+    margin-top: 2px;
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    left: 50%;
+    justify-content: center;
+    position: fixed;
+    top: 55px;
+    z-index: 1000;
+    background-color: red;
     border-radius: 10px;
     transform: translateX(-50%);
     width: min(750px, calc(100% - 80px));
-    
 }
 
 p {
@@ -55,38 +64,39 @@ p {
 }
 
 .Footer {
-    display: flex; 
-    flex-direction: row; 
-    height: 30px; 
-    position: fixed; 
-    bottom: 0; 
-    z-index: 1000; 
-    left: 0; 
+    display: flex;
+    flex-direction: row;
+    height: 30px;
+    position: fixed;
+    bottom: 0;
+    z-index: 1000;
+    left: 0;
     width: 100%;
-    background-color: red; 
+    background-color: red;
     justify-content: center;
-}  
+}
+
 .Copyright {
     color: white;
     text-align: center;
-    width: 1000px;
+    width: 100%;
+    max-width: 1000px;
     padding-bottom: 20px;
-    height: 1000px;
-    align-items: center;
-    margin: 9px;
+    margin: 9px 0;
     font-size: 12px;
 }
-
 
 .Strana {
     padding: 30px;
     box-sizing: border-box;
-    margin-top: 100px; 
-    width: 1000px;
+    margin-top: 100px;
+    margin-bottom: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1000px;
+    width: 100%;
     display: flex;
-    width: min(1000px, calc(100% - 20px));
 }
-
 
 .Sidebar {
     background-color: red;
@@ -95,16 +105,20 @@ p {
     position: fixed;
     height: 350px;
     width: min(150px, calc(100% - 80px));
-    
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    overflow-y: auto;
+    margin-right: 100px;
 }
-
 
 .Recepty {
     flex: 1;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
     gap: 18px;
-    margin-left: 225px;
+    margin-left: 6px;
+    
 }
 
 .Recept {
@@ -116,9 +130,8 @@ p {
 }
 
 .Obrazokjedla {
-    width: 80%;
+    width: 100%;
     display: block;
-
 }
 
 .Popis {
@@ -126,6 +139,87 @@ p {
     color: white;
     text-align: bottom;
     font-size: 14px;
+}
+
+@media (max-width: 768px) {
+    .Logo {
+        width: 100px;
+    }
+
+    .Header {
+        width: calc(100% - 20px);
+    }
+
+    .Navbar {
+        width: calc(100% - 80px);
+        gap: 5px;
+    }
+
+    .Navbar_buttons {
+        font-size: 14px;
+        margin: 3px;
+    }
+
+    .Sidebar {
+        width: min(120px, calc(100% - 60px));
+        height: 300px;
+    }
+
+    .Recepty {
+        grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+        margin-left: 160px;
+        gap: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .Logo {
+        width: 80px;
+    }
+
+    .Header {
+        width: calc(100% - 10px);
+        margin-top: 2px;
+    }
+
+    .Navbar {
+        width: calc(100% - 40px);
+        top: 50px;
+        gap: 2px;
+    }
+
+    .Navbar_buttons {
+        font-size: 12px;
+        margin: 2px;
+        padding: 5px;
+    }
+
+    .Strana {
+        margin-top: 90px;
+        padding: 10px;
+        flex-direction: column;
+    }
+
+    .Sidebar {
+        position: static;
+        width: 100%;
+        height: auto;
+        margin-bottom: 15px;
+    }
+
+    .Recepty {
+        grid-template-columns: 1fr;
+        margin-left: 0;
+        gap: 12px;
+    }
+
+    .Obrazokjedla {
+        width: 100%;
+    }
+
+    .Popis {
+        font-size: 12px;
+    }
 }
 
 
