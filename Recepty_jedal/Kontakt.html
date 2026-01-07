@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Recepty</title>
+</head>
+<body>
+  
+    <input type="checkbox" id="sidebar-toggle" class="sidebar-toggle">
+    <label for="sidebar-toggle" class="Menu_btn">☰</label>
+    <div class="top-cover"></div>
+
+    <div class="Sidebar">
+        <h2>Filtre</h2>
+    </div>
+
+    <div class="Header">
+        <img class="Logo" src="Sendvic_Stranka.jpg" alt="Logo">
+    </div>
+
+    <div class="Navbar">
+        <a href="index.html"><button class="Navbar_buttons">Domov</button></a>
+        <a href="Novinky.html"><button class="Navbar_buttons">Novinky</button></a>
+        <a href="Recepty.html"><button class="Navbar_buttons">Recepty</button></a>
+    </div>
+       
+    <main class="Strana">
+        <H3>Kontaktujte nás</H3>
+        
+        <form class="formular" id="form">
+            <div class="pole">
+                <label for="meno">Meno:</label>
+                <input type="text" id="meno" name="meno" required>
+            </div>
+
+            <div class="pole">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+
+            <div class="pole">
+                <label for="predmet">Predmet:</label>
+                <input type="text" id="predmet" name="predmet" required>
+            </div>
+
+            <div class="pole">
+                <label for="sprava">Správa:</label>
+                <textarea id="sprava" name="sprava" rows="6" required></textarea>
+            </div>
+
+            <button type="odoslat" class="btn">Odoslať</button>
+        </form>
+    </main>
+
+    <div class="Footer">
+        <p class="Copyright">Všetky práva vyhradené</p>
+        <a href="Kontakt.html"><button class="Kontakt">Kontaktujte nás</button></a>
+        
+    </div>
+
+    
+
+    
+</body>
+</html>
