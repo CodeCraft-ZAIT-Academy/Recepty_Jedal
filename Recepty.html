@@ -26,36 +26,84 @@
     </div>
        
     <main class="Strana">
+        <button class="Pridat_recept_btn" onclick="openModal()">+ Pridať recept</button>
+        
+       
+        <div id="recipeModal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal()">&times;</span>
+                <h3>Pridať nový recept</h3>
+                <form class="recipe-form">
+                    <input type="text" placeholder="Názov receptu" required>
+                    <textarea placeholder="Krátky popis" rows="3"></textarea>
+                    <textarea placeholder="Ingrediencie" rows="4"></textarea>
+                    <textarea placeholder="Postup prípravy" rows="4"></textarea>
+                    <button type="submit">Pridať</button>
+                </form>
+            </div>
+        </div>
+
+        
         <section class="Recepty">
          
           <section class="Recept">
-            <a href="Bryndzove_halusky.html"><div class="Obrazokjedla"><img src="halusky.jpg" alt="Recept 1"></div></a>
-            <div class="Popis"><div class="title">Bryndzové halušky</div><div class="desc">Bryndzové halušky sú považované za národné jedlo Slovenska. Pripravujú sa zo zemiakového cesta a tradičnej ovčej bryndze, ktorá im dodáva výraznú chuť.</div>
+            <div class="Obrazokjedla"><a href="Bryndzove_halusky.html"><img src="halusky.jpg" alt="Recept 1"></a></div>
+            <div class="Popis"><div class="title">Bryndzové halušky</div><div class="hodnotenie">⭐10/10</div><div class="desc">Bryndzové halušky sú považované za národné jedlo Slovenska. Pripravujú sa zo zemiakového cesta a tradičnej ovčej bryndze, ktorá im dodáva výraznú chuť.</div>
           </section>
 
           <section class="Recept">
-            <a href="Kapustnica.html"><div class="Obrazokjedla"><img src="Kapustnica.jpg" alt="Recept 2"></div></a>
-            <div class="Popis"><div class="title">Kapustnica</div><div class="desc">Kapustnica je tradičná slovenská polievka, ktorá sa najčastejšie pripravuje počas Vianoc, no chutí výborne po celý rok.</div>
+            <div class="Obrazokjedla"><a href="Kapustnica.html"><img src="Kapustnica.jpg" alt="Recept 2"></a></div>
+            <div class="Popis"><div class="title">Kapustnica</div><div class="hodnotenie">⭐9/10</div><div class="desc">Kapustnica je tradičná slovenská polievka, ktorá sa najčastejšie pripravuje počas Vianoc, no chutí výborne po celý rok.</div>
           </section>
 
           <section class="Recept">
-            <a href="Pirohy_s_bryndzou.html"><div class="Obrazokjedla"><img src="Pirohy s bryndzou.jpg" alt="Recept 3"></div></a>
-            <div class="Popis"><div class="title">Pirohy s bryndzou</div><div class="desc">Pirohy patria medzi obľúbené tradičné jedlá, ktoré sa pripravujú najmä pri rodinných stretnutiach.</div>
+            <div class="Obrazokjedla"><a href="Pirohy_s_bryndzou.html"><img src="Pirohy s bryndzou.jpg" alt="Recept 3"></a></div>
+            <div class="Popis"><div class="title">Pirohy s bryndzou</div><div class="hodnotenie">⭐8/10</div><div class="desc">Pirohy patria medzi obľúbené tradičné jedlá, ktoré sa pripravujú najmä pri rodinných stretnutiach.</div>
           </section>
 
           <section class="Recept">
-            <a href="Segedinsky_gulas.html"><div class="Obrazokjedla"><img src="Segedinsky gulas.jpg" alt="Recept 4"></div></a>
-            <div class="Popis"><div class="title">Segedínsky guláš</div><div class="desc">Segedínsky guláš je sýte jedlo z bravčového mäsa a kyslej kapusty, často podávané s knedľou.</div>
+            <div class="Obrazokjedla"><a href="Segedinsky_gulas.html"><img src="Segedinsky gulas.jpg" alt="Recept 4"></a></div>
+            <div class="Popis"><div class="title">Segedínsky guláš</div><div class="hodnotenie">⭐7/10</div><div class="desc">Segedínsky guláš je sýte jedlo z bravčového mäsa a kyslej kapusty, často podávané s knedľou.</div>
           </section>
 
           <section class="Recept">
-            <a href="Zemiakove_placky.html"><div class="Obrazokjedla"><img src="Zemiakove placky.jpg" alt="Recept 5"></div></a>
-            <div class="Popis"><div class="title">Zemiakové placky</div><div class="desc">Zemiakové placky sú obľúbené jednoduché jedlo, ktoré sa pripravuje z dostupných surovín a má výraznú cesnakovú chuť.</div>
+            <div class="Obrazokjedla"><a href="Zemiakove_placky.html"><img src="Zemiakove placky.jpg" alt="Recept 5"></a></div>
+            <div class="Popis"><div class="title">Zemiakové placky</div><div class="hodnotenie">⭐8/10</div><div class="desc">Zemiakové placky sú obľúbené jednoduché jedlo, ktoré sa pripravuje z dostupných surovín a má výraznú cesnakovú chuť.</div>
           </section>
 
           <section class="Recept">
-            <a href="Sulance_s_makom.html"><div class="Obrazokjedla"><img src="Sulance s makom.jpg" alt="Recept 6"></div></a>
-            <div class="Popis"><div class="title">Šuľance s makom</div><div class="desc">Šúľance s makom sú tradičné sladké jedlo, často pripravované ako obed alebo sladká večera.</div>
+            <div class="Obrazokjedla"><a href="Sulance_s_makom.html"><img src="Sulance s makom.jpg" alt="Recept 6"></a></div>
+            <div class="Popis"><div class="title">Šuľance s makom</div><div class="hodnotenie">⭐8/10</div><div class="desc">Šúľance s makom sú tradičné sladké jedlo, často pripravované ako obed alebo sladká večera.</div>
+          </section>
+
+          <section class="Recept">
+            <div class="Obrazokjedla"><a href="Parenice.html"><img src="recipe7.jpg" alt="Recept 7"></a></div>
+            <div class="Popis"><div class="title">Parenice</div><div class="hodnotenie">⭐8/10</div><div class="desc">Parenice sú obľúbené zemiakové špeciality plnené tvarohom a slaninou. Tradičné slovenské jedlo.</div>
+          </section>
+
+          <section class="Recept">
+            <div class="Obrazokjedla"><a href="Lievance.html"><img src="Lievance.jpg" alt="Recept 8"></a></div>
+            <div class="Popis"><div class="title">Lievance</div><div class="hodnotenie">⭐9/10</div><div class="desc">Lievance sú sladké kysnuté alebo nekysnuté placky, ktoré sa najčastejšie podávajú na raňajky alebo ako dezert.</div>
+          </section>
+
+          <section class="Recept">
+            <div class="Obrazokjedla"><a href="Kuraci_paprikas.html"><img src="Kuraci paprikas.jpg" alt="Recept 9"></a></div>
+            <div class="Popis"><div class="title">Kurací paprikáš</div><div class="hodnotenie">⭐7/10</div><div class="desc">Kurací paprikáš je obľúbené jedlo, ktoré sa často pripravuje ako nedeľný obed. Má jemnú, krémovú chuť a podáva sa s haluškami alebo cestovinami.</div>
+          </section>
+
+          <section class="Recept">
+            <div class="Obrazokjedla"><a href="Klobasa_s_kapustou.html"><img src="klobasa s kapustou.jpg" alt="Recept 10"></a></div>
+            <div class="Popis"><div class="title">Klobása s kapustou</div><div class="hodnotenie">⭐8/10</div><div class="desc">Klobása s kapustou je rýchle a sýte jedlo z tradičnej slovenskej kuchyne.</div>
+          </section>
+
+          <section class="Recept">
+            <div class="Obrazokjedla"><a href="Gulas.html"><img src="Gulas.jpg" alt="Recept 11"></a></div>
+            <div class="Popis"><div class="title">Guláš</div><div class="hodnotenie">⭐9/10</div><div class="desc">Klasický maďarský guláš s hovädzím mäsom, paprikom a zemiakmi.</div>
+          </section>
+
+          <section class="Recept">
+            <div class="Obrazokjedla"><a href="Zemiakovy_privarok.html"><img src="Zemiakovy privarok.jpg" alt="Recept 12"></a></div>
+            <div class="Popis"><div class="title">Zemiakový prívarok</div><div class="hodnotenie">⭐8/10</div><div class="desc">Zemiakový prívarok je tradičné slovenské jedlo, ktoré sa často podáva s vajíčkom alebo klobásou. Je sýty, jednoduchý a typický pre domácu kuchyňu.</div>
           </section>
         </section>
     </main>
@@ -64,5 +112,30 @@
         <p class="Copyright">Všetky práva vyhradené</p>
         <a href="Kontakt.html"><button class="Kontakt">Kontaktujte nás</button></a>
     </div>
+
+    <script>
+        function openModal() {
+            document.getElementById('recipeModal').style.display = 'block';
+        }
+
+        function closeModal() {
+            document.getElementById('recipeModal').style.display = 'none';
+        }
+
+        function closeDetailModal() {
+            document.getElementById('detailModal').style.display = 'none';
+        }
+
+        window.onclick = function(event) {
+            const modal = document.getElementById('recipeModal');
+            const detailModal = document.getElementById('detailModal');
+            if (event.target == modal) {
+                modal.style.display = 'none';
+            }
+            if (event.target == detailModal) {
+                detailModal.style.display = 'none';
+            }
+        }
+    </script>
 </body>
 </html>
