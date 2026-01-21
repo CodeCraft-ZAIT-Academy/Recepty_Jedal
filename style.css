@@ -1,6 +1,15 @@
 /* ========================================
-   TLAČIDLO NA PRIDÁVANIE RECEPTOV
+   TLAČIDLÁ NA PRIDÁVANIE A NÁHODNÝ RECEPT
    ======================================== */
+
+/* Kontajner na tlačidlá vedľa seba */
+.buttons-container {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
 
 /* Zelené tlačidlo na pridávanie nového receptu do kolekcie */
 .Pridat_recept_btn {
@@ -11,14 +20,29 @@
     font-size: 16px;
     border-radius: 8px;
     cursor: pointer;
-    margin: 20px auto;
-    display: block;
     transition: background-color 0.3s;
     font-weight: bold;
 }
 
 .Pridat_recept_btn:hover {
     background-color: #218838;
+}
+
+/* Tlačidlo na náhodný recept */
+.Random_recept_btn {
+    background-color: #17a2b8;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-weight: bold;
+}
+
+.Random_recept_btn:hover {
+    background-color: #138496;
 }
 
 
@@ -245,7 +269,7 @@ p {
 }
 
 /* ========================================
-   PÄTA (FOOTER)
+   FOOTER
    ======================================== */
 
 /* Červená päta na spodku stránky s kontaktnými informáciami */
@@ -264,16 +288,18 @@ p {
 
 /* Tlačidlo Kontakt v päte */
 .Kontakt {
-    position: absolute;
+    position: fixed;
     right: 10px;
     color: rgb(255, 255, 255);
     border: none;
     padding: 5px 10px;
-    font-size: 15px;
+    font-size: 12px;
     border-radius: 5px;
     cursor: pointer;
     background: none;
-    margin-top: 2px;
+    margin-top: 4px;
+    justify-content: right;
+    display: flex;
 }
 
 /* ========================================
@@ -409,7 +435,7 @@ p {
     top: 0;
     width: 240px;
     height: 100vh;
-    background-color: rgb(92, 53, 163);
+    background-color: rgb(223, 76, 76);
     padding-top: 20px;
     transition: left 0.3s;
     z-index: 1004;
@@ -561,6 +587,13 @@ h3 {
     display: none;
 }
 
+/* Semi-transparent overlay keď je sidebar otvorený */
+#sidebar-toggle:checked ~ .top-cover {
+    background-color: rgba(0, 0, 0, 0.5) !important;
+    height: 100vh !important;
+    opacity: 0.7;
+}
+
 
 /* ========================================
    FORMULÁR
@@ -698,12 +731,17 @@ h3 {
     }
 
     .Sidebar {
-        position: static;
-        width: 100%;
-        height: auto;
-        margin-bottom: 15px;
+        position: fixed;
+        width: 240px;
+        height: 100vh;
+        left: -250px;
+        margin-bottom: 0;
     }
 
+    /* Automaticky zavri sidebar keď klikneš na odkaz */
+    .filter-link {
+        display: block;
+    }
     .Recepty {
         grid-template-columns: 1fr;
         margin-left: 0;
@@ -832,22 +870,13 @@ h3 {
     transform: scale(1.05);
 }
 
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
+
 
 /* ========================================
    TABUĽKA S VIDEO NÁVODOM
    ======================================== */
 
-/* Kontainer s tabuľkou nutričnej hodnoty a videom vedľa seba */
+
 .video_container {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -902,5 +931,87 @@ h3 {
         padding: 12px 30px;
         font-size: 14px;
     }
+}
+
+/* ========================================
+   FILTRY V SIDEBÁRI
+   ======================================== */
+
+.filters-container {
+    width: 100%;
+    padding: 15px 10px;
+    color: white;
+}
+
+.filter-title {
+    font-size: 16px;
+    font-weight: bold;
+    margin: 0 0 15px 0;
+    color: #ffffff;
+    text-align: center;
+}
+
+.filter-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.filter-link {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    font-size: 14px;
+    color: #ffffff;
+    text-decoration: none;
+    user-select: none;
+    transition: color 0.2s, background-color 0.2s;
+    padding: 8px;
+    border-radius: 4px;
+}
+
+.filter-link:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #ffd700;
+}
+
+.filter-link .filter-icon {
+    margin-right: 8px;
+    font-size: 12px;
+    opacity: 0;
+    transition: opacity 0.2s;
+}
+
+.filter-link:hover .filter-icon {
+    opacity: 1;
+}
+
+/* ========================================
+   FILTER FUNCTIONALITY - HIDING RECIPES
+   ======================================== */
+
+/* Štandardne zobraziť všetky recepty */
+.Recepty .Recept {
+    display: grid;
+}
+
+/* Keď je #soups targeted - skryť všetko okrem soups */
+body:has(#soups:target) .Recepty .Recept:not(.soups) {
+    display: none;
+}
+
+/* Keď je #mains targeted - skryť všetko okrem mains */
+body:has(#mains:target) .Recepty .Recept:not(.mains) {
+    display: none;
+}
+
+/* Keď je #dumplings targeted - skryť všetko okrem dumplings */
+body:has(#dumplings:target) .Recepty .Recept:not(.dumplings) {
+    display: none;
+}
+
+/* Keď je #desserts targeted - skryť všetko okrem desserts */
+body:has(#desserts:target) .Recepty .Recept:not(.desserts) {
+    display: none;
 }
 
