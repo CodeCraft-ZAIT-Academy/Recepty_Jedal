@@ -843,6 +843,44 @@ h3 {
     }
 }
 
+/* ========================================
+   TABUĽKA S VIDEO NÁVODOM
+   ======================================== */
+
+/* Kontainer s tabuľkou nutričnej hodnoty a videom vedľa seba */
+.video_container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin: 30px 0;
+    align-items: start;
+}
+
+/* Sekcia s nutričnými informáciami */
+.nutrition_section {
+    flex: 1;
+}
+
+/* Sekcia s video návodom */
+.video_section {
+    flex: 1;
+}
+
+.video_section h3 {
+    margin-top: 0;
+    color: #dc3545;
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+/* Responsívny dizajn pre malé obrazovky */
+@media (max-width: 768px) {
+    .video_container {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+}
+
 @media (max-width: 768px) {
     .welcome-section h1 {
         font-size: 28px;
