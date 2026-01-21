@@ -991,9 +991,7 @@ h3 {
    ======================================== */
 
 /* Štandardne zobraziť všetky recepty */
-.Recepty .Recept {
-    display: grid;
-}
+
 
 /* Keď je #soups targeted - skryť všetko okrem soups */
 body:has(#soups:target) .Recepty .Recept:not(.soups) {
