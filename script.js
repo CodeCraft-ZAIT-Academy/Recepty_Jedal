@@ -1,4 +1,4 @@
-// Zoznam všetkých receptov
+    // Zoznam všetkých receptov
 const recipes = [
     'Bryndzove_halusky.html',
     'Kapustnica.html',
