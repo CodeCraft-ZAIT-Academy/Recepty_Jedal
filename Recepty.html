@@ -7,12 +7,45 @@
     <title>Recepty</title>
 </head>
 <body>
+    <div id="all"></div>
+    <div id="soups"></div>
+    <div id="mains"></div>
+    <div id="dumplings"></div>
+    <div id="desserts"></div>
+    
     <input type="checkbox" id="sidebar-toggle" class="sidebar-toggle">
     <label for="sidebar-toggle" class="Menu_btn">☰</label>
     <div class="top-cover"></div>
 
     <div class="Sidebar">
-        <label for="sidebar-toggle" class="Close_btn">Filtre</label> 
+        <label for="sidebar-toggle" class="Close_btn"></label>
+        
+        <div class="filters-container">
+            <h4 class="filter-title">Filtrovať podľa</h4>
+            
+            <div class="filter-group">
+                <a href="#all" class="filter-link">
+                    <span class="filter-icon">✓</span>
+                    <span>Všetko</span>
+                </a>
+                <a href="#soups" class="filter-link">
+                    <span class="filter-icon">✓</span>
+                    <span>Polievky</span>
+                </a>
+                <a href="#mains" class="filter-link">
+                    <span class="filter-icon">✓</span>
+                    <span>Hlavné jedlá</span>
+                </a>
+                <a href="#dumplings" class="filter-link">
+                    <span class="filter-icon">✓</span>
+                    <span>Halušky & Placky</span>
+                </a>
+                <a href="#desserts" class="filter-link">
+                    <span class="filter-icon">✓</span>
+                    <span>Dezerty</span>
+                </a>
+            </div>
+        </div>
     </div>
 
     <div class="Header">
@@ -26,7 +59,10 @@
     </div>
        
     <main class="Strana">
-        <button class="Pridat_recept_btn" onclick="openModal()">+ Pridať recept</button>
+        <div class="buttons-container">
+            <button class="Pridat_recept_btn" onclick="openModal()">+ Pridať recept</button>
+            <button class="Random_recept_btn" onclick="openRandomRecipe()">🎲 Náhodný recept</button>
+        </div>
         
        
         <div id="recipeModal" class="modal">
@@ -46,62 +82,62 @@
         
         <section class="Recepty">
          
-          <section class="Recept">
+          <section class="Recept dumplings">
             <div class="Obrazokjedla"><a href="Bryndzove_halusky.html"><img src="halusky.jpg" alt="Recept 1"></a></div>
             <div class="Popis"><div class="title">Bryndzové halušky</div><div class="hodnotenie">⭐10/10</div><div class="desc">Bryndzové halušky sú považované za národné jedlo Slovenska. Pripravujú sa zo zemiakového cesta a tradičnej ovčej bryndze, ktorá im dodáva výraznú chuť.</div>
           </section>
 
-          <section class="Recept">
+          <section class="Recept soups">
             <div class="Obrazokjedla"><a href="Kapustnica.html"><img src="Kapustnica.jpg" alt="Recept 2"></a></div>
             <div class="Popis"><div class="title">Kapustnica</div><div class="hodnotenie">⭐9/10</div><div class="desc">Kapustnica je tradičná slovenská polievka, ktorá sa najčastejšie pripravuje počas Vianoc, no chutí výborne po celý rok.</div>
           </section>
 
-          <section class="Recept">
+          <section class="Recept dumplings">
             <div class="Obrazokjedla"><a href="Pirohy_s_bryndzou.html"><img src="Pirohy s bryndzou.jpg" alt="Recept 3"></a></div>
             <div class="Popis"><div class="title">Pirohy s bryndzou</div><div class="hodnotenie">⭐8/10</div><div class="desc">Pirohy patria medzi obľúbené tradičné jedlá, ktoré sa pripravujú najmä pri rodinných stretnutiach.</div>
           </section>
 
-          <section class="Recept">
+          <section class="Recept mains">
             <div class="Obrazokjedla"><a href="Segedinsky_gulas.html"><img src="Segedinsky gulas.jpg" alt="Recept 4"></a></div>
             <div class="Popis"><div class="title">Segedínsky guláš</div><div class="hodnotenie">⭐7/10</div><div class="desc">Segedínsky guláš je sýte jedlo z bravčového mäsa a kyslej kapusty, často podávané s knedľou.</div>
           </section>
 
-          <section class="Recept">
+          <section class="Recept dumplings">
             <div class="Obrazokjedla"><a href="Zemiakove_placky.html"><img src="Zemiakove placky.jpg" alt="Recept 5"></a></div>
             <div class="Popis"><div class="title">Zemiakové placky</div><div class="hodnotenie">⭐8/10</div><div class="desc">Zemiakové placky sú obľúbené jednoduché jedlo, ktoré sa pripravuje z dostupných surovín a má výraznú cesnakovú chuť.</div>
           </section>
 
-          <section class="Recept">
+          <section class="Recept desserts">
             <div class="Obrazokjedla"><a href="Sulance_s_makom.html"><img src="Sulance s makom.jpg" alt="Recept 6"></a></div>
             <div class="Popis"><div class="title">Šuľance s makom</div><div class="hodnotenie">⭐8/10</div><div class="desc">Šúľance s makom sú tradičné sladké jedlo, často pripravované ako obed alebo sladká večera.</div>
           </section>
 
-          <section class="Recept">
+          <section class="Recept mains">
             <div class="Obrazokjedla"><a href="Vyprazany_rezen.html"><img src="Vyprazany rezen.jpg" alt="Recept 7"></a></div>
             <div class="Popis"><div class="title">Vyprážaný rezeň</div><div class="hodnotenie">⭐8/10</div><div class="desc">Vyprážaný rezeň je jedno z najobľúbenejších jedál na Slovensku. Pripravuje sa najčastejšie z bravčového alebo kuracieho mäsa a podáva sa so zemiakovým šalátom alebo varenými zemiakmi.</div>
           </section>
 
-          <section class="Recept">
+          <section class="Recept desserts">
             <div class="Obrazokjedla"><a href="Lievance.html"><img src="Lievance.jpg" alt="Recept 8"></a></div>
             <div class="Popis"><div class="title">Lievance</div><div class="hodnotenie">⭐9/10</div><div class="desc">Lievance sú sladké kysnuté alebo nekysnuté placky, ktoré sa najčastejšie podávajú na raňajky alebo ako dezert.</div>
           </section>
 
-          <section class="Recept">
+          <section class="Recept mains">
             <div class="Obrazokjedla"><a href="Kuraci_paprikas.html"><img src="Kuraci paprikas.jpg" alt="Recept 9"></a></div>
             <div class="Popis"><div class="title">Kurací paprikáš</div><div class="hodnotenie">⭐7/10</div><div class="desc">Kurací paprikáš je obľúbené jedlo, ktoré sa často pripravuje ako nedeľný obed. Má jemnú, krémovú chuť a podáva sa s haluškami alebo cestovinami.</div>
           </section>
 
-          <section class="Recept">
+          <section class="Recept mains">
             <div class="Obrazokjedla"><a href="Klobasa_s_kapustou.html"><img src="klobasa s kapustou.jpg" alt="Recept 10"></a></div>
             <div class="Popis"><div class="title">Klobása s kapustou</div><div class="hodnotenie">⭐8/10</div><div class="desc">Klobása s kapustou je rýchle a sýte jedlo z tradičnej slovenskej kuchyne.</div>
           </section>
 
-          <section class="Recept">
+          <section class="Recept mains">
             <div class="Obrazokjedla"><a href="Gulas.html"><img src="Gulas.jpg" alt="Recept 11"></a></div>
             <div class="Popis"><div class="title">Guláš</div><div class="hodnotenie">⭐9/10</div><div class="desc">Klasický maďarský guláš s hovädzím mäsom, paprikom a zemiakmi.</div>
           </section>
 
-          <section class="Recept">
+          <section class="Recept mains">
             <div class="Obrazokjedla"><a href="Zemiakovy_privarok.html"><img src="Zemiakovy privarok.jpg" alt="Recept 12"></a></div>
             <div class="Popis"><div class="title">Zemiakový prívarok</div><div class="hodnotenie">⭐8/10</div><div class="desc">Zemiakový prívarok je tradičné slovenské jedlo, ktoré sa často podáva s vajíčkom alebo klobásou. Je sýty, jednoduchý a typický pre domácu kuchyňu.</div>
           </section>
@@ -114,6 +150,27 @@
     </div>
 
     <script>
+        // Zoznam všetkých receptov
+        const recipes = [
+            'Bryndzove_halusky.html',
+            'Kapustnica.html',
+            'Pirohy_s_bryndzou.html',
+            'Segedinsky_gulas.html',
+            'Zemiakove_placky.html',
+            'Sulance_s_makom.html',
+            'Vyprazany_rezen.html',
+            'Lievance.html',
+            'Kuraci_paprikas.html',
+            'Klobasa_s_kapustou.html',
+            'Gulas.html',
+            'Zemiakovy_privarok.html'
+        ];
+
+        function openRandomRecipe() {
+            const randomIndex = Math.floor(Math.random() * recipes.length);
+            window.location.href = recipes[randomIndex];
+        }
+
         function openModal() {
             document.getElementById('recipeModal').style.display = 'block';
         }
@@ -125,6 +182,16 @@
         function closeDetailModal() {
             document.getElementById('detailModal').style.display = 'none';
         }
+
+        
+        document.querySelectorAll('.filter-link').forEach(link => {
+            link.addEventListener('click', function() {
+                // Zavri sidebar na mobile
+                if (window.innerWidth <= 768) {
+                    document.getElementById('sidebar-toggle').checked = false;
+                }
+            });
+        });
 
         window.onclick = function(event) {
             const modal = document.getElementById('recipeModal');
