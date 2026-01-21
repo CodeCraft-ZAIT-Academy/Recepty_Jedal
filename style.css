@@ -1,6 +1,8 @@
+/* ========================================
+   TLAČIDLO NA PRIDÁVANIE RECEPTOV
+   ======================================== */
 
-
-
+/* Zelené tlačidlo na pridávanie nového receptu do kolekcie */
 .Pridat_recept_btn {
     background-color: #28a745;
     color: white;
@@ -18,6 +20,11 @@
 .Pridat_recept_btn:hover {
     background-color: #218838;
 }
+
+
+/* ========================================
+   SEKCIA NA PRIDÁVANIE RECEPTOV
+   ======================================== */
 
 
 .add-recipe-section {
@@ -48,6 +55,7 @@
     overflow: auto;
 }
 
+
 .modal-content {
     background-color: #f5f5f5;
     margin: 5% auto;
@@ -65,6 +73,7 @@
     margin-top: 0;
 }
 
+
 .close {
     color: #dc3545;
     float: right;
@@ -77,6 +86,11 @@
 .close:hover {
     color: #c82333;
 }
+
+/* ========================================
+   FORMULÁR NA RECEPTY
+   ======================================== */
+
 
 .recipe-form {
     display: flex;
@@ -105,6 +119,11 @@
     transition: background-color 0.3s;
 }
 
+/* ========================================
+   DETAIL RECEPTU
+   ======================================== */
+
+
 .recipe-detail {
     background-color: white;
     padding: 15px;
@@ -124,6 +143,10 @@
     margin: 0;
 }
 
+/* ========================================
+   KARTA RECEPTU
+   ======================================== */
+
 .Recept {
     cursor: pointer;
     transition: transform 0.3s;
@@ -133,6 +156,11 @@
     transform: scale(1.05);
 }
 
+/* ========================================
+   NAVIGAČNÉ TLAČIDLÁ
+   ======================================== */
+
+
 .Navbar_buttons {
     background-color: transparent;
     border: none;
@@ -141,6 +169,10 @@
     margin: 5px;
     cursor: pointer;
 }
+
+/* ========================================
+   Header
+   ======================================== */
 
 .Header {
     margin-top: 5px;
@@ -156,6 +188,8 @@
     border-radius: 10px;
     
 }
+
+/* Biely kryt na vrchu okna - skrývá obsah pod fixovanou hlavičkou */
 .top-cover {
     position: fixed;
     top: 0;
@@ -166,10 +200,15 @@
     z-index: 1000; 
 }
 
+
 .Logo {
     width: 140px;
     margin-top: 3px;
 }
+
+/* ========================================
+   NAVIGAČNÁ LIŠTA
+   ======================================== */
 
 .Navbar {
     margin-top: 2px;
@@ -187,6 +226,11 @@
     width: min(750px, calc(100% - 80px));
 }
 
+/* ========================================
+   HLAVNÝ TEXT A OBSAH
+   ======================================== */
+
+
 p {
     color: white;
     text-align: center;
@@ -197,6 +241,11 @@ p {
     padding-bottom: 8px;
 }
 
+/* ========================================
+   PÄTA (FOOTER)
+   ======================================== */
+
+/* Červená päta na spodku stránky s kontaktnými informáciami */
 .Footer {
     display: flex;
     flex-direction: row;
@@ -210,6 +259,7 @@ p {
     justify-content: center;
 }
 
+/* Tlačidlo Kontakt v päte */
 .Kontakt {
     position: absolute;
     right: 10px;
@@ -223,6 +273,10 @@ p {
     margin-top: 2px;
 }
 
+/* ========================================
+   COPYRIGHT
+   ======================================== */
+
 .Copyright {
     color: white;
     text-align: center;
@@ -232,6 +286,10 @@ p {
     margin: 9px 0;
     font-size: 12px;
 }
+
+/* ========================================
+   HLAVNÁ OBSAHOVÁ OBLASŤ
+   ======================================== */
 
 .Strana {
     padding: 30px;
@@ -246,6 +304,11 @@ p {
 
 
 
+/* ========================================
+   DETAIL RECEPTU (JEDNOTLIVÁ STRÁNKA)
+   ======================================== */
+
+/* Hlavný kontajner receptu */
 .recipe {
     max-width: 740px;
     margin: 0 auto;
@@ -258,6 +321,7 @@ p {
     margin-bottom: 12px;
 }
 
+/* Obrázok receptu */
 .recipe-img {
     display: block;
     max-width: 90%;
@@ -266,6 +330,11 @@ p {
     border-radius: 8px;
     
 }
+
+
+/* ========================================
+   VÝŽIVOVÁ TABUĽKA
+   ======================================== */
 
 
 .Vyzivova_tabulka {
@@ -297,16 +366,20 @@ p {
     font-size: 14px;
 }
 
+
+/* Zoznam ingrediencií receptu */
 .ing {
     text-align: left;
     margin-left: 25px;
 }
 
 
+
 .Miznutie {
     color: black;
     
 }
+
 
 .Menu_btn {
     position: fixed;
@@ -321,6 +394,11 @@ p {
     cursor: pointer;
     z-index: 1005;
 }
+
+/* ========================================
+   BOČNÉ MENU (SIDEBAR)
+   ======================================== */
+
 
 .Sidebar {
     position: fixed;
@@ -338,6 +416,7 @@ p {
     align-items: center;
 }
 
+
 h2 {
     color: rgb(0, 0, 0);
     text-align: center;
@@ -345,12 +424,14 @@ h2 {
     
 }
 
+
 h3 {
     color: rgb(0, 0, 0);
     margin-top: 100px;
     text-align: center;
     font-size: 30px;
 }
+
 
 #sidebar-toggle:checked ~ .Sidebar {
     left: 0px;
@@ -363,6 +444,10 @@ h3 {
     right: 575px;
 }
 
+/* ========================================
+   MRIEŽKA RECEPTOV
+   ======================================== */
+
 .Recepty {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
@@ -371,10 +456,10 @@ h3 {
     
 }
 
-.Miznutie {
-    background-color: white;
+/* ========================================
+   KARTA RECEPTU - ŠTÝLY
+   ======================================== */
 
-}
 
 .Recept {
     background-color: black;
@@ -383,18 +468,25 @@ h3 {
     height: 100%;
 }
 
+/* Kontajner na obrázok receptu */
 .Obrazokjedla {
     width: 100%;
     height: 160px; 
     overflow: hidden;
 }
 
+/* Obrázok v recepte - pokryje celý kontajner */
 .Obrazokjedla img {
     width: 100%;
     height: 100%;
     object-fit: cover; 
     display: block;
 }
+
+/* ========================================
+   POPIS RECEPTU V KARTE
+   ======================================== */
+
 
 .Popis {
     padding: 10px;
@@ -403,6 +495,7 @@ h3 {
     font-size: 14px;
 }
 
+/* Nadpis receptu v karte */
 .Popis .title {
     font-weight: 700;
     font-size: 18px;
@@ -415,12 +508,20 @@ h3 {
     color: #f1f1f1;
 }
 
+/* ========================================
+   HODNOTENIE (RATING)
+   ======================================== */
+
 .hodnotenie {
     font-size: 14px;
     color: #ffd700; 
     margin-bottom: 8px;
 }
 
+
+/* ========================================
+   POSTUP PRÍPRAVY
+   ======================================== */
 
 .postup {
     column-count: 2;
@@ -451,10 +552,16 @@ h3 {
 }
 
 
+   /*SIDEBAR TOGGLE CHECKBOX*/
+
 .sidebar-toggle {
     display: none;
 }
 
+
+/* ========================================
+   FORMULÁR
+   ======================================== */
 
 .form {
     background-color: #f5f5f5;
@@ -495,6 +602,10 @@ h3 {
     box-shadow: none;
 }
 
+/* ========================================
+   TLAČIDLÁ
+   ======================================== */
+
 .btn {
     background-color: #302f2f;
     color: white;
@@ -513,6 +624,11 @@ h3 {
 }
 
 
+/* ========================================
+   RESPONSÍVNY DIZAJN (MOBIL)
+   ======================================== */
+
+/* Úpravy pre malé obrazovky */
 @media (max-width: 768px) {
     .Logo {
         width: 100px;
@@ -544,6 +660,11 @@ h3 {
     }
 }
 
+/* ========================================
+   RESPONSÍVNY DIZAJN - MALÉ TELEFÓNY
+   ======================================== */
+
+/* Úpravy pre veľmi malé obrazovky (do 480px) */
 @media (max-width: 480px) {
     .Logo {
         width: 80px;
@@ -603,6 +724,141 @@ h3 {
     }
 }
 
+/* ========================================
+   HOMEPAGE ŠTÝLY (DOMOVSKÁ STRÁNKA)
+   ======================================== */
+
+/* Kontajner domovskej stránky */
+.Container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
 
 
+.Uvitanie {
+    text-align: center;
+    margin-bottom: 50px;
+    animation: fadeIn 0.8s ease-in;
+}
+
+.Uvitanie h1 {
+    font-size: 42px;
+    color: #dc3545;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+
+.Uvitaci_text {
+    font-size: 18px;
+    color: #333;
+    line-height: 1.6;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+
+.info_boxes {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-bottom: 50px;
+}
+
+
+.info_box {
+    background: linear-gradient(135deg, #f5f5f5 0%, #e8e8e8 100%);
+    padding: 30px;
+    border-radius: 10px;
+    border-left: 5px solid #dc3545;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.info_box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+
+.info_box h2 {
+    color: #dc3545;
+    margin-top: 0;
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+
+.info_box p {
+    color: #555;
+    line-height: 1.6;
+    font-size: 15px;
+}
+
+
+.Okienko_recepty2 {
+    text-align: center;
+    background: rgb(223, 76, 76);
+    padding: 40px;
+    border-radius: 10px;
+    color: white;
+}
+
+.Okienko_recepty2 p {
+    font-size: 20px;
+    margin-bottom: 20px;
+    margin-top: 0;
+}
+
+.Btn_recepty2 {
+    background-color: white;
+    color: #dc3545;
+    border: none;
+    padding: 15px 40px;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.Btn_recepty2:hover {
+    background-color: #f5f5f5;
+    transform: scale(1.05);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 768px) {
+    .welcome-section h1 {
+        font-size: 28px;
+    }
+    
+    .welcome-text {
+        font-size: 16px;
+    }
+    
+    .info-boxes {
+        grid-template-columns: 1fr;
+    }
+    
+    .cta-section {
+        padding: 25px;
+    }
+    
+    .cta-button {
+        padding: 12px 30px;
+        font-size: 14px;
+    }
+}
 
