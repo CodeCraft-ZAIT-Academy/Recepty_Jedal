@@ -301,6 +301,20 @@ p {
     justify-content: right;
     display: flex;
 }
+.Dalsia_stranka {
+    position: fixed;
+    left: 10px;
+    color: rgb(255, 255, 255);
+    border: none;
+    padding: 5px 10px;
+    font-size: 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    background: none;
+    margin-top: 4px;
+    justify-content: left;
+    display: flex;
+}
 
 /* ========================================
    COPYRIGHT
